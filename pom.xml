@@ -8,7 +8,132 @@
     <artifactId>TimeD-Day</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <httpclient-version>4.5.2</httpclient-version>
+        <jsoup-version>1.8.3</jsoup-version>
+    </properties>
 
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>1.3.3.RELEASE</version>
+    </parent>
 
+    <dependencies>
+        <!-- httpclient -->
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient-version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpmime</artifactId>
+            <version>${httpclient-version}</version>
+        </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>fluent-hc</artifactId>
+            <version>${httpclient-version}</version>
+        </dependency>
+
+        <!-- jsoup  -->
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup-version}</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter</artifactId>
+        </dependency>
+
+        <!-- spring-boot -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+        </dependency>
+
+        <!-- mongodb -->
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.mongodb</groupId>
+            <artifactId>mongodb-driver-async</artifactId>
+            <version>3.2.2</version>
+        </dependency>
+
+        <!-- Gson -->
+        <dependency>
+            <groupId>com.google.code.gson</groupId>
+            <artifactId>gson</artifactId>
+            <version>2.6.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>net.sf.json-lib</groupId>
+            <artifactId>json-lib</artifactId>
+            <version>2.4</version>
+            <type>pom</type>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--<groupId>commons-collections</groupId>-->
+        <!--<artifactId>commons-collections</artifactId>-->
+        <!--<version>3.2.2</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>commons-beanutils</groupId>-->
+        <!--<artifactId>commons-beanutils</artifactId>-->
+        <!--<version>1.9.2</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>commons-lang</groupId>-->
+        <!--<artifactId>commons-lang</artifactId>-->
+        <!--<version>2.6</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>net.sf.ezmorph</groupId>-->
+        <!--<artifactId>ezmorph</artifactId>-->
+        <!--<version>1.0.6</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--<groupId>commons-logging</groupId>-->
+        <!--<artifactId>commons-logging</artifactId>-->
+        <!--<version>1.2</version>-->
+        <!--</dependency>-->
+    </dependencies>
+
+    <build>
+        <plugins>
+            <!-- spring  -->
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.7</source>
+                    <target>1.7</target>
+                    <compilerArgument>-Xlint:all</compilerArgument>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+
+        </plugins>
+    </build>
 </project>
