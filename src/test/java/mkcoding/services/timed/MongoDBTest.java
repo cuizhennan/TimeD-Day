@@ -19,13 +19,13 @@ public class MongoDBTest {
 
     private static final Logger logger = LoggerFactory.getLogger(MongoDBTest.class);
 
-    private MongoCollection<Document> collection = null;
+    private static MongoCollection<Document> collection = null;
 
     public MongoDBTest() {
         MongoClientURI mongoClientURI = new MongoClientURI("mongodb://localhost:27017");
         MongoClient mongoClient = new MongoClient(mongoClientURI);
         MongoDatabase database = mongoClient.getDatabase("d-day");
-        collection = database.getCollection("timed-day");
+        collection = database.getCollection("timed_day");
     }
 
     @RequestMapping("/find")
@@ -36,10 +36,14 @@ public class MongoDBTest {
 
 //    public static void main(String[] args) {
 //        MongoClientURI mongoClientURI = new MongoClientURI("mongodb://localhost:27017");
-//
 //        MongoClient mongoClient = new MongoClient(mongoClientURI);
-//
 //        MongoDatabase database = mongoClient.getDatabase("d-day");
 //
+//        MongoCollection<Document> collection = database.getCollection("timed_day");
+//
+//        Document document = new Document();
+//        document.append("test", "123test");
+//
+//        collection.insertOne(document);
 //    }
 }
