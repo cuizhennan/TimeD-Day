@@ -30,6 +30,7 @@
 
     <logger name="org.mongodb" level="WARN"/>
     <logger name="org.springframework" level="WARN"/>
+    <logger name="org.apache.http.wire" level="WARN"/>
 
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
