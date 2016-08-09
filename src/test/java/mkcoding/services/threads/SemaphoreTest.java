@@ -1,8 +1,5 @@
 package mkcoding.services.threads;
 
-import org.apache.hadoop.fs.shell.Count;
-import org.jsoup.nodes.Element;
-
 import java.util.Collections;
 import java.util.HashSet;
 import java.util.Set;
