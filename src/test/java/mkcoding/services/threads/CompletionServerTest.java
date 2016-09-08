@@ -81,7 +81,10 @@ public class CompletionServerTest {
     }
 
     public static void main(String[] args) {
-        ExecutorService executorService = Executors.newCachedThreadPool();
-        new CompletionServerTest(executorService).downloadHtml();
+//        ExecutorService executorService = Executors.newCachedThreadPool();
+//        new CompletionServerTest(executorService).downloadHtml();
+
+        System.out.println(System.currentTimeMillis());
+        System.out.println(System.nanoTime());
     }
 }

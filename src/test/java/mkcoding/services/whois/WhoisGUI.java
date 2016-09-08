@@ -11,6 +11,8 @@ import java.net.UnknownHostException;
  */
 public class WhoisGUI extends JFrame {
 
+    private static final long serialVersionUID = -2165983693751161140L;
+
     private JTextField searchString = new JTextField(30);
     private JTextArea names = new JTextArea(15, 80);
     private JButton findButton = new JButton("Find");
