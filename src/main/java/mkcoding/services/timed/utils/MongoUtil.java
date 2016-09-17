@@ -77,13 +77,4 @@ public class MongoUtil {
             logger.error("init ==>", e);
         }
     }
-
-
-    public static void main(String[] args) {
-        JSONObject jsonObject = new JSONObject();
-        jsonObject.put("hello", "world");
-        jsonObject.put("who", "world");
-
-        new MongoUtil().insert(jsonObject.toString());
-    }
 }
