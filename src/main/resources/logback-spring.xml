@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<configuration>
+<configuration debug="true">
     <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
 
     <!--<include resource="org/springframework/boot/logging/logback/console-appender.xml"/>-->
     <!--<include resource="org/springframework/boot/logging/logback/file-appender.xml"/>-->
 
-    <property name="LOG_PATH" value="/home/logs/day.log"/>
-    <!--<property name="LOG_PATH" value="/Users/mx/logs/daylogs/day.log"/>-->
+    <!--<property name="LOG_PATH" value="/home/logs/day.log"/>-->
+    <property name="LOG_PATH" value="/Users/mx/logs/daylogs/day.log"/>
 
     <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
         <encoder>
@@ -32,6 +32,8 @@
     <logger name="org.mongodb" level="WARN"/>
     <logger name="org.springframework" level="WARN"/>
     <logger name="org.apache.http" level="WARN"/>
+
+    <logger name="mkcoding.services.timed" level="INFO" addtivity="true"/>
 
     <root level="INFO">
         <appender-ref ref="CONSOLE"/>
