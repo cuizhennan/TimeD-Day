@@ -30,6 +30,6 @@ public class WebSocketConfig extends AbstractWebSocketMessageBrokerConfigurer {
 
         config.enableSimpleBroker("/topic");
 //        config.setApplicationDestinationPrefixes("/app");
-        config.setPathMatcher(new AntPathMatcher("*"));
+        config.setPathMatcher(new AntPathMatcher("."));
     }
 }
